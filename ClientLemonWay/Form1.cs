@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientLemonWay.SoapServiceLimomWay;
 using log4net;
-
+using Microsoft.VisualBasic;
 
 namespace ClientLemonWay
 {
@@ -21,14 +21,19 @@ namespace ClientLemonWay
         private bool HoldHeader = false;
 
 
-        WebRequester Fibo = new WebRequester("http://176.31.248.121/SoapService.asmx");
+        WebRequester Requester;
+
+
         public static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         SynchronizationContext CurrentSync;
         public static bool FinishPaint = true;
 
+      
 
         public Form1()
         {
+            ConfigService();
             SetStyle(ControlStyles.DoubleBuffer, true);
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.DoubleBuffered = true;
@@ -41,6 +46,22 @@ namespace ClientLemonWay
             log.Info("Start Program");
         }
 
+
+        private void ConfigService()
+        {
+            Form diagTitle = new Form();
+            string reponse = Interaction.InputBox("Url de votre service, si aucune information n'est remplie le client se connectera sur le service 'http://176.31.248.121/SoapService.asmx'", "Url du service", "", -1, -1);
+            if (string.IsNullOrEmpty(reponse))
+            {
+                Requester = new WebRequester("http://176.31.248.121/SoapService.asmx");
+                MessageBox.Show("Service sur http://176.31.248.121/SoapService.asmx");
+            }
+            else
+            {
+                Requester = new WebRequester(reponse);
+                MessageBox.Show("Service sur "+reponse);
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -72,7 +93,13 @@ namespace ClientLemonWay
         private async void FiboCallWeb_Click(object sender, EventArgs e)
         {
 
-            await Request("Fibonacci",Btn_FiboService,57);
+            
+            if(string.IsNullOrEmpty(Tbt_Fibo.Text))
+            {
+                MessageBox.Show("Input Vide");
+                return;
+            }
+            await Request("Fibonacci",Btn_FiboService,Tbt_Fibo.Text);
        
         }
 
@@ -108,7 +135,7 @@ namespace ClientLemonWay
                         control.Enabled = false;
                     }, null);
 
-                    string Resultat = Fibo.Request(method, TypeHttp.Post, values);
+                    string Resultat = Requester.Request(method, TypeHttp.Post, values);
 
                     CurrentSync.Post((o) =>
                     {
@@ -121,9 +148,15 @@ namespace ClientLemonWay
                 }
                 catch(Exception ex)
                 {
+                    CurrentSync.Post((o) =>
+                    {
+                        Loader(false);
+                        control.Enabled = true;
+                    }, null);
                     log.Error("Method Service " + method + "No Work!");
                     log.Error(ex.Message);
                     MessageBox.Show("Error Look Log");
+
                 }
 
             });
@@ -175,6 +208,11 @@ namespace ClientLemonWay
         private async void Btn_XmlToJson_Click(object sender, EventArgs e)
         {
             await Request("XmlToJson",Btn_XmlToJson, XmlContent.Text);
+        }
+
+        private async void Btn_fibo10_Click(object sender, EventArgs e)
+        {
+            await Request("Fibonacci", Btn_fibo10, 10);
         }
     }
 }

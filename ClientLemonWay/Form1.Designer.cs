@@ -30,25 +30,27 @@
         {
             this.Btn_FiboService = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.XmlContent = new System.Windows.Forms.RichTextBox();
-            this.Btn_XmlToJson = new System.Windows.Forms.Button();
-            this.Fibo_Panel = new System.Windows.Forms.Panel();
-            this.XmlToJsonPanel = new System.Windows.Forms.Panel();
+            this.Label_load = new System.Windows.Forms.Label();
+            this.LoaderGif = new System.Windows.Forms.PictureBox();
             this.Btn_min = new System.Windows.Forms.Button();
             this.Btn_maxWin = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.LoaderGif = new System.Windows.Forms.PictureBox();
-            this.Label_load = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.Btn_XmlToJson = new System.Windows.Forms.Button();
+            this.XmlContent = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.XmlToJsonPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Tbt_Fibo = new System.Windows.Forms.TextBox();
+            this.Fibo_Panel = new System.Windows.Forms.Panel();
+            this.Btn_fibo10 = new System.Windows.Forms.Button();
             this.HeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoaderGif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoaderGif)).BeginInit();
+            this.Fibo_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_FiboService
@@ -80,104 +82,27 @@
             this.HeaderPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseMove);
             this.HeaderPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseUp);
             // 
-            // splitContainer1
+            // Label_load
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(0, 33);
-            this.splitContainer1.Name = "splitContainer1";
+            this.Label_load.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Label_load.AutoSize = true;
+            this.Label_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(237)))), ((int)(((byte)(125)))));
+            this.Label_load.Font = new System.Drawing.Font("Rockwell Extra Bold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_load.ForeColor = System.Drawing.Color.White;
+            this.Label_load.Location = new System.Drawing.Point(40, 9);
+            this.Label_load.Name = "Label_load";
+            this.Label_load.Size = new System.Drawing.Size(154, 21);
+            this.Label_load.TabIndex = 5;
+            this.Label_load.Text = "Requesting...";
+            this.Label_load.Visible = false;
             // 
-            // splitContainer1.Panel1
+            // LoaderGif
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.Btn_XmlToJson);
-            this.splitContainer1.Panel1.Controls.Add(this.XmlContent);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.XmlToJsonPanel);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.Btn_FiboService);
-            this.splitContainer1.Panel2.Controls.Add(this.Fibo_Panel);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 418);
-            this.splitContainer1.SplitterDistance = 409;
-            this.splitContainer1.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox1.Location = new System.Drawing.Point(144, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
-            this.label1.Font = new System.Drawing.Font("Rockwell Extra Bold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(86)))), ((int)(((byte)(133)))));
-            this.label1.Location = new System.Drawing.Point(110, 152);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Fibonacci Service";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
-            this.label2.Font = new System.Drawing.Font("Rockwell Extra Bold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(86)))), ((int)(((byte)(133)))));
-            this.label2.Location = new System.Drawing.Point(75, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "XmlToJson Service";
-            // 
-            // XmlContent
-            // 
-            this.XmlContent.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.XmlContent.Location = new System.Drawing.Point(79, 187);
-            this.XmlContent.Name = "XmlContent";
-            this.XmlContent.Size = new System.Drawing.Size(211, 109);
-            this.XmlContent.TabIndex = 4;
-            this.XmlContent.Text = "";
-            // 
-            // Btn_XmlToJson
-            // 
-            this.Btn_XmlToJson.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Btn_XmlToJson.Location = new System.Drawing.Point(131, 302);
-            this.Btn_XmlToJson.Name = "Btn_XmlToJson";
-            this.Btn_XmlToJson.Size = new System.Drawing.Size(75, 23);
-            this.Btn_XmlToJson.TabIndex = 3;
-            this.Btn_XmlToJson.Text = "FiboAction";
-            this.Btn_XmlToJson.UseVisualStyleBackColor = true;
-            this.Btn_XmlToJson.Click += new System.EventHandler(this.Btn_XmlToJson_Click);
-            // 
-            // Fibo_Panel
-            // 
-            this.Fibo_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
-            this.Fibo_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Fibo_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Fibo_Panel.Location = new System.Drawing.Point(0, 0);
-            this.Fibo_Panel.Name = "Fibo_Panel";
-            this.Fibo_Panel.Size = new System.Drawing.Size(387, 418);
-            this.Fibo_Panel.TabIndex = 3;
-            // 
-            // XmlToJsonPanel
-            // 
-            this.XmlToJsonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
-            this.XmlToJsonPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.XmlToJsonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.XmlToJsonPanel.Location = new System.Drawing.Point(0, 0);
-            this.XmlToJsonPanel.Name = "XmlToJsonPanel";
-            this.XmlToJsonPanel.Size = new System.Drawing.Size(409, 418);
-            this.XmlToJsonPanel.TabIndex = 4;
+            this.LoaderGif.Location = new System.Drawing.Point(4, 2);
+            this.LoaderGif.Name = "LoaderGif";
+            this.LoaderGif.Size = new System.Drawing.Size(30, 30);
+            this.LoaderGif.TabIndex = 5;
+            this.LoaderGif.TabStop = false;
             // 
             // Btn_min
             // 
@@ -221,27 +146,116 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseUp);
             // 
-            // LoaderGif
+            // splitContainer1
             // 
-            this.LoaderGif.Location = new System.Drawing.Point(4, 2);
-            this.LoaderGif.Name = "LoaderGif";
-            this.LoaderGif.Size = new System.Drawing.Size(30, 30);
-            this.LoaderGif.TabIndex = 5;
-            this.LoaderGif.TabStop = false;
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(0, 33);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // Label_load
+            // splitContainer1.Panel1
             // 
-            this.Label_load.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Label_load.AutoSize = true;
-            this.Label_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(237)))), ((int)(((byte)(125)))));
-            this.Label_load.Font = new System.Drawing.Font("Rockwell Extra Bold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_load.ForeColor = System.Drawing.Color.White;
-            this.Label_load.Location = new System.Drawing.Point(40, 9);
-            this.Label_load.Name = "Label_load";
-            this.Label_load.Size = new System.Drawing.Size(154, 21);
-            this.Label_load.TabIndex = 5;
-            this.Label_load.Text = "Requesting...";
-            this.Label_load.Visible = false;
+            this.splitContainer1.Panel1.Controls.Add(this.Btn_XmlToJson);
+            this.splitContainer1.Panel1.Controls.Add(this.XmlContent);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.XmlToJsonPanel);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.Tbt_Fibo);
+            this.splitContainer1.Panel2.Controls.Add(this.Btn_FiboService);
+            this.splitContainer1.Panel2.Controls.Add(this.Fibo_Panel);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 418);
+            this.splitContainer1.SplitterDistance = 409;
+            this.splitContainer1.TabIndex = 5;
+            // 
+            // Btn_XmlToJson
+            // 
+            this.Btn_XmlToJson.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Btn_XmlToJson.Location = new System.Drawing.Point(131, 302);
+            this.Btn_XmlToJson.Name = "Btn_XmlToJson";
+            this.Btn_XmlToJson.Size = new System.Drawing.Size(75, 23);
+            this.Btn_XmlToJson.TabIndex = 3;
+            this.Btn_XmlToJson.Text = "FiboAction";
+            this.Btn_XmlToJson.UseVisualStyleBackColor = true;
+            this.Btn_XmlToJson.Click += new System.EventHandler(this.Btn_XmlToJson_Click);
+            // 
+            // XmlContent
+            // 
+            this.XmlContent.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.XmlContent.Location = new System.Drawing.Point(79, 187);
+            this.XmlContent.Name = "XmlContent";
+            this.XmlContent.Size = new System.Drawing.Size(211, 109);
+            this.XmlContent.TabIndex = 4;
+            this.XmlContent.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
+            this.label2.Font = new System.Drawing.Font("Rockwell Extra Bold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(86)))), ((int)(((byte)(133)))));
+            this.label2.Location = new System.Drawing.Point(75, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(215, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "XmlToJson Service";
+            // 
+            // XmlToJsonPanel
+            // 
+            this.XmlToJsonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
+            this.XmlToJsonPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.XmlToJsonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.XmlToJsonPanel.Location = new System.Drawing.Point(0, 0);
+            this.XmlToJsonPanel.Name = "XmlToJsonPanel";
+            this.XmlToJsonPanel.Size = new System.Drawing.Size(409, 418);
+            this.XmlToJsonPanel.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
+            this.label1.Font = new System.Drawing.Font("Rockwell Extra Bold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(86)))), ((int)(((byte)(133)))));
+            this.label1.Location = new System.Drawing.Point(110, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Fibonacci Service";
+            // 
+            // Tbt_Fibo
+            // 
+            this.Tbt_Fibo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Tbt_Fibo.Location = new System.Drawing.Point(144, 187);
+            this.Tbt_Fibo.Name = "Tbt_Fibo";
+            this.Tbt_Fibo.Size = new System.Drawing.Size(100, 20);
+            this.Tbt_Fibo.TabIndex = 1;
+            // 
+            // Fibo_Panel
+            // 
+            this.Fibo_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(120)))), ((int)(((byte)(157)))));
+            this.Fibo_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Fibo_Panel.Controls.Add(this.Btn_fibo10);
+            this.Fibo_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Fibo_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Fibo_Panel.Name = "Fibo_Panel";
+            this.Fibo_Panel.Size = new System.Drawing.Size(387, 418);
+            this.Fibo_Panel.TabIndex = 3;
+            // 
+            // Btn_fibo10
+            // 
+            this.Btn_fibo10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_fibo10.Location = new System.Drawing.Point(113, 252);
+            this.Btn_fibo10.Name = "Btn_fibo10";
+            this.Btn_fibo10.Size = new System.Drawing.Size(156, 23);
+            this.Btn_fibo10.TabIndex = 4;
+            this.Btn_fibo10.Text = "Compute Fibonancci(10)";
+            this.Btn_fibo10.UseVisualStyleBackColor = true;
+            this.Btn_fibo10.Click += new System.EventHandler(this.Btn_fibo10_Click);
             // 
             // Form1
             // 
@@ -255,13 +269,14 @@
             this.Text = "Form1";
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoaderGif)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoaderGif)).EndInit();
+            this.Fibo_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -275,7 +290,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Tbt_Fibo;
         private System.Windows.Forms.Button Btn_XmlToJson;
         private System.Windows.Forms.RichTextBox XmlContent;
         private System.Windows.Forms.Label label2;
@@ -283,6 +298,7 @@
         private System.Windows.Forms.Panel Fibo_Panel;
         private System.Windows.Forms.PictureBox LoaderGif;
         private System.Windows.Forms.Label Label_load;
+        private System.Windows.Forms.Button Btn_fibo10;
     }
 }
 
