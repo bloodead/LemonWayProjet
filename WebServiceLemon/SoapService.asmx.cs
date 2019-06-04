@@ -27,20 +27,27 @@ namespace WebServiceLemon
         public int Fibonacci(int n)
         {
             Thread.Sleep(5000);
-        
-            if (1 > n || n > 100)
-                return -1;
 
-            int a = 0;
-            int b = 1;
-
-            for (int i = 0; i < n; i++)
+            try
             {
-                int temp = a;
-                a = b;
-                b = temp + b;
+                if (1 > n || n > 100)
+                    return -1;
+
+                int a = 0;
+                int b = 1;
+
+                for (int i = 0; i < n; i++)
+                {
+                    int temp = a;
+                    a = b;
+                    b = temp + b;
+                }
+                return a;
             }
-            return a;
+            catch
+            {
+                return -1;
+            }
         }
 
      
