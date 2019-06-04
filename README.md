@@ -8,6 +8,7 @@ Logiciel Utilisé
 
 Lib Extern
 - Log4Net
+- Xunit
 
 How
 ---------------------------
