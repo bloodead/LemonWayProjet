@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceLemon", "WebServiceLemon\WebServiceLemon.csproj", "{1BE3DF9E-98D6-4268-AB9C-492884496A56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientLemonWay", "ClientLemonWay\ClientLemonWay.csproj", "{D02B65A4-4722-40EB-8AB6-2779A6483F77}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BE3DF9E-98D6-4268-AB9C-492884496A56} = {1BE3DF9E-98D6-4268-AB9C-492884496A56}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BE3DF9E-98D6-4268-AB9C-492884496A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE3DF9E-98D6-4268-AB9C-492884496A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE3DF9E-98D6-4268-AB9C-492884496A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE3DF9E-98D6-4268-AB9C-492884496A56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02B65A4-4722-40EB-8AB6-2779A6483F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02B65A4-4722-40EB-8AB6-2779A6483F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02B65A4-4722-40EB-8AB6-2779A6483F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02B65A4-4722-40EB-8AB6-2779A6483F77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12AB6C75-BD31-4C69-BFBD-C0D3AD65AFA7}
+	EndGlobalSection
+EndGlobal
