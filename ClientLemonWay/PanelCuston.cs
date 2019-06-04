@@ -38,7 +38,7 @@ namespace ClientLemonWay
                {
                    e.Graphics.FillRectangle(brush, this.ClientRectangle);
                }
-           // base.OnPaint(e);
+           
         }
     }
 
@@ -50,9 +50,8 @@ namespace ClientLemonWay
         FrameDimension fd;
         int TickFrame = 1;
         int tickCurrent = 0;
-        bool FirstF = false;
-        Graphics tempo;
-        Bitmap t;
+        
+    
         public PictCustom(Image img,Size si)
         {
             this.Size = si;
@@ -64,7 +63,7 @@ namespace ClientLemonWay
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         
             BackColor = Color.Transparent;
-            t = new Bitmap(img, this.Size.Width, this.Size.Width);
+            
 
             imag = img;
             fd = new FrameDimension(img.FrameDimensionsList[0]);
@@ -78,10 +77,7 @@ namespace ClientLemonWay
 
         private void PictCustom_Paint(object sender, PaintEventArgs e)
         {
-            //   e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            //  e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
             
-            //this.CreateGraphics();
             if (tickCurrent >TickFrame)
             {
                 if(CurrentFrame >= frameMax-1)
@@ -99,11 +95,11 @@ namespace ClientLemonWay
             }
 
             
-           // e.Graphics.Clear(Color.Empty);
+          
             e.Graphics.DrawImage(imag, 0, 0);
 
             Form1.FinishPaint = true;
-           // base.OnPaint(e);
+          
 
         }
 
