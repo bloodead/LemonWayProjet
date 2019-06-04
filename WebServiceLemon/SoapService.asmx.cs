@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Web;
+using System.Web.Script.Services;
 using System.Web.Services;
 using System.Xml;
 using System.Xml.Linq;
@@ -24,6 +25,7 @@ namespace WebServiceLemon
 
 
         [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public int Fibonacci(int n)
         {
             Thread.Sleep(5000);
@@ -48,6 +50,7 @@ namespace WebServiceLemon
             {
                 return -1;
             }
+            
         }
 
      

@@ -44,16 +44,12 @@ namespace ClientLemonWay
            // MessageBox.Show(SOAPReqBody.OuterXml);
             using (Stream writer = CurrentRequest.GetRequestStream())
             {
-
-
                 SOAPReqBody.Save(writer);
-
-
-
                 HttpWebResponse reponse = (HttpWebResponse)CurrentRequest.GetResponse();
-                   StreamReader Reader = new StreamReader(reponse.GetResponseStream());
-
-                   Result = Reader.ReadToEnd();
+                using (StreamReader Reader = new StreamReader(reponse.GetResponseStream()))
+                {
+                    Result = Reader.ReadToEnd();
+                }
             }
 
                 
